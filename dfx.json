@@ -1,0 +1,39 @@
+{
+  "canisters": {
+    "practico_backend": {
+      "build": "npx azle practico_backend",
+      "candid": "src/practico_backend/practico_backend.did",
+      "gzip": true,
+      "main": "src/practico_backend/src/index.ts",
+      "tech_stack": {
+        "cdk": {
+          "azle": {}
+        },
+        "language": {
+          "javascript": {},
+          "typescript": {}
+        }
+      },
+      "type": "custom",
+      "wasm": ".azle/practico_backend/practico_backend.wasm"
+    },
+    "practico_frontend": {
+      "dependencies": [
+        "practico_backend"
+      ],
+      "source": [
+        "src/practico_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "practico_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
